@@ -1,5 +1,6 @@
-const args = process.argv.slice(2);
+// import { spawn } from 'child_process'
 
+const args = process.argv.slice(2);
 console.log(`Total number of arguments is ${args.length}`);
 console.log(`Arguments: ${JSON.stringify(args)}`);
 

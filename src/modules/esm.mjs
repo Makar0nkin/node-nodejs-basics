@@ -12,14 +12,12 @@ const random = Math.random();
 let unknownObject;
 
 if (random > 0.5) {
-    // unknownObject = require('./files/a.json');
     unknownObject = await import("./files/a.json", {
         assert: {
             type: "json",
         },
     });
 } else {
-    // unknownObject = require('./files/b.json');
     unknownObject  = await import("./files/b.json", {
         assert: {
             type: "json",
@@ -46,11 +44,6 @@ myServer.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
     console.log('To terminate it, use Ctrl+C combination');
 });
-
-// module.exports = {
-//     unknownObject,
-//     myServer,
-// };
 
 export default unknownObject
 export { myServer }
